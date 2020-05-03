@@ -3,7 +3,7 @@ version: "3"
 services:
   cloudflared:
     container_name: cloudflared
-    image: visibilityspots/cloudflared:amd64
+    image: visibilityspots/cloudflared:arm64
     restart: unless-stopped
     networks:
       pihole_net:
@@ -11,7 +11,7 @@ services:
 
   pi-hole:
     container_name: pi-hole
-    image: pihole/pihole:v4.2.2_amd64
+    image: pihole/pihole:v4.4-arm64
     restart: unless-stopped
     ports:
       - "80:80/tcp"
